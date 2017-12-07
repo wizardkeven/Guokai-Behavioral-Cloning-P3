@@ -12,6 +12,7 @@ from PIL import Image
 from flask import Flask
 from io import BytesIO
 
+from keras import backend as K
 from keras.models import load_model
 import h5py
 from keras import __version__ as keras_version
@@ -44,7 +45,7 @@ class SimplePIController:
 
 
 controller = SimplePIController(0.1, 0.002)
-set_speed = 9
+set_speed = 15.0
 controller.set_desired(set_speed)
 
 
