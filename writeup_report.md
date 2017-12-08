@@ -1,9 +1,5 @@
 # **Behavioral Cloning** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Behavioral Cloning Project**
@@ -97,6 +93,30 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+
+
+| Layer (type)         		|     Output Shape 	        |   Param       |
+|:---------------------:|:----------------------:|:-----------------------:|                            
+| lambda_normalize_layer    |  (Lamb (None, 160, 320, 3)      | 0        |
+| cropping2d_1 (Cropping2D)  |  (None, 65, 320, 3)     |   0|
+| lambda_1 (Lambda)         |   (None, 64, 64, 3)     |    0|
+| cv_1_3x1x1 (Conv2D)       |   (None, 64, 64, 3)     |    12|
+| cv_2_24x5x5 (Conv2D)      |   (None, 32, 32, 24)    |    1824|
+| cv_3_36x3x3 (Conv2D)      |   (None, 16, 16, 36)    |    7812|
+| cv_4_48x3x3 (Conv2D)      |   (None, 8, 8, 48)      |    15600|
+| dropout_1 (Dropout)       |   (None, 8, 8, 48)      |    0|
+| cv_5_64x3x3 (Conv2D)      |   (None, 6, 6, 64)       |   27712|
+| cv_6_64x3x3 (Conv2D)      |   (None, 4, 4, 64)      |    36928|
+| dropout_2 (Dropout)        |  (None, 4, 4, 64)      |    0|
+| flatten_1 (Flatten)       |   (None, 1024)        |      0|
+| fc_1_100 (Dense)          |   (None, 100)         |      102500|
+| fc_2_50 (Dense)           |   (None, 50)         |       5050|
+| fc_3_10 (Dense)           |   (None, 10)        |        510|
+| dropout_3 (Dropout)       |   (None, 10)        |        0|
+| dense_1 (Dense)           |   (None, 1)          |       11|
+| Total params | |197,959     |        
+| Trainable params | | 197,959| 
+| Non-trainable params | | 0|
 
 ![alt text][image1]
 
