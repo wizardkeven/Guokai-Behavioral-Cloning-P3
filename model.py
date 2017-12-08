@@ -107,9 +107,9 @@ model = Sequential()
 # lambda layer to normalize input color
 model.add(Lambda(lambda x: x/127.5-1.0,input_shape = (160,320,3),output_shape=(160,320,3),name ='lambda_normalize_layer'))
 # cropping layer to trim off unrelavent horizontal parts
-model.add(Cropping2D(cropping=((70, 25), (0, 0))))
+model.add(Cropping2D(cropping=((70, 25), (0, 0)),name ='Cropping_layer'))
 # resize layer to resize input image to 64x64 in order to reduce training time
-model.add(Lambda(lambda image: K.tf.image.resize_images(image, (64,64))))
+model.add(Lambda(lambda image: K.tf.image.resize_images(image, (64,64)),name ='lambda_resize_layer'))
 
 # convolutional layer for color space auto-adaptation inspired from medium post
 model.add(Conv2D(3,(1,1),activation='elu',name='cv_1_3x1x1')) 
