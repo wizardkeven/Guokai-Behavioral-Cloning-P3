@@ -1,4 +1,4 @@
-![alt text][image2]# **Behavioral Cloning** 
+# **Behavioral Cloning** 
 
 ---
 
@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-
+-0.30975719
 [//]: # (Image References)
 
 [image1]: ./examples/example1.jpg "Original image"
@@ -142,12 +142,16 @@ In this project, I learned a new idea about CNN. Different from the previous pro
 
 To augment the data sat, I add random brightness enhancement and randomly translate images and angles thinking that this would help model learn how to handle different sunlight enviroment and deviation situations. For example, here is an image that has then been passed to add random brightness enhancement.
 
-**Original image**         
+**Original image with steer angle: -0.30975719**         
 
 ![alt text][image1]
-**Brightness enchancement**
+
+**Brightness enchancement with steer angle: -0.30975719**
+
 ![alt text][image2]
-**Randomly translated image**
+
+**Randomly translated image **
+
 ![alt text][image3]
 
 This project lead me to a new stage when thinking about machine learning and neural network. It taught me the importance of proper data in success of a task and also appropriate method to adjust training data to yield better performance with same data set.
