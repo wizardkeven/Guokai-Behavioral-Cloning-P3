@@ -14,9 +14,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
+[image1]: ./examples/example1.jpg "Original image"
+[image2]: ./examples/example1_bci.jpg "Random Brightness Enhencement"
+[image3]: ./examples/tans.jap "Randomly translated image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
@@ -143,7 +143,8 @@ In this project, I learned a new idea about CNN. Different from the previous pro
 
 To augment the data sat, I add random brightness enhancement and randomly translate images and angles thinking that this would help model learn how to handle different sunlight enviroment and deviation situations. For example, here is an image that has then been passed to add random brightness enhancement:
 
-![Original image][examples/example1.jpg]
-![Random brightness enhancement][example1_bci.jpg]
+![alt text]][image1]
+![alt text]][image2]
+![alt text]][image3]
 
 This project lead me to a new stage when thinking about machine learning and neural network. It taught me the importance of proper data in success of a task and also appropriate method to adjust training data to yield better performance with same data set.
