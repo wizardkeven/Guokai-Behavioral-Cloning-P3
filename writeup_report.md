@@ -90,7 +90,19 @@ My first step was to use a simple linear network model similar to the one in cou
 
 In the first stage, I use the data collected by myself. I tried collecting with reverse track, recovering from deviation place even totally outside of track. I was thinking this could be a perfect data set, but the model was performing terribly with traininf and validation accuracy around 0.5 again and again no matter how I trained and preprocessed. Then I found it was completely wrong to evaluate the model with "accuracy" for this project after seeing some posts on forum and [**_medium_**](https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9) because the output is a continuous float number not classifier. It is better to consider the mean-squared-error as this means how predicted steer angles similar to human behavior. Additionally, he data that I collected was some bad "behavior" as I the images that I used at that time are all from center-camera in which contain most of 0 for steer angles. So I decided to use the data set of udacity of all cameras.
 
-I used the translation and brightness methods in the post as whatever I write myself, it wll be similar as I use the same parameters. 
+I used the translation and brightness methods in the post as whatever I write myself, it wll be similar as I use the same parameters. The translation process follows with steer angle adjusting to adapt the new camera view of cars, however, I didn't dig in strict physics, but anyway, the final model works well. Here are the example images.
+
+**Original image with steer angle: -0.30975719**         
+
+![alt text][image1]
+
+**Brightness enchancement with steer angle: -0.30975719**
+
+![alt text][image2]
+
+**Randomly translated image with steer angle adjustment: -0.332972643985**
+
+![alt text][image3]
 
 Then I started on a jupyter notebook for convenience. I applied the architeture described above and prepared data with concatenating all images and add universally steer angle adjusting for left-camera and right-camera. I decided to use generator instead of train on memery when I found my computer was working really slow after I loaded all images for train. Therefore I modified the generator in udacity courses to yield different data set for train and test. The final generator will generate preprocessed images with brightness adjusting and randmon translation of adjusted steer angles for training and original images fro test.
 
@@ -141,17 +153,5 @@ In this project, I learned a new idea about CNN. Different from the previous pro
 2. The importance of data augmentation. I didn't realized the augmentation is so critical to the success of certain tasks. I used it for getting more images in traffic sign classifier project. But the real turning point for this project is just introducing image translate and steer angles adjustment. The change is so obvious that I got a perfect driving behavior without modifying model architecure compared to direct falling out of track with previous bad data.
 
 To augment the data sat, I add random brightness enhancement and randomly translate images and angles thinking that this would help model learn how to handle different sunlight enviroment and deviation situations. For example, here is an image that has then been passed to add random brightness enhancement.
-
-**Original image with steer angle: -0.30975719**         
-
-![alt text][image1]
-
-**Brightness enchancement with steer angle: -0.30975719**
-
-![alt text][image2]
-
-**Randomly translated image**
-
-![alt text][image3]
 
 This project lead me to a new stage when thinking about machine learning and neural network. It taught me the importance of proper data in success of a task and also appropriate method to adjust training data to yield better performance with same data set.
