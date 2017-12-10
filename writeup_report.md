@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/example1.jpg "Original image"
 [image2]: ./examples/example1_bci.jpg "Random Brightness Enhencement"
-[image3]: ./examples/tans.jap "Randomly translated image"
+[image3]: ./examples/tans.jpg "Randomly translated image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
@@ -150,7 +150,7 @@ To augment the data sat, I add random brightness enhancement and randomly transl
 
 ![alt text][image2]
 
-**Randomly translated image **
+**Randomly translated image**
 
 ![alt text][image3]
 
