@@ -11,12 +11,12 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
--0.30975719
+
 [//]: # (Image References)
 
 [image1]: ./examples/example1.jpg "Original image"
 [image2]: ./examples/example1_bci.jpg "Random Brightness Enhencement"
-[image3]: ./examples/tans.jpg "Randomly translated image"
+[image3]: ./examples/trans.jpg "Randomly translated image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
