@@ -27,7 +27,6 @@ The goals / steps of this project are the following:
 
 ---
 ### Files Submitted & Code Quality
-
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
@@ -141,8 +140,10 @@ In this project, I learned a new idea about CNN. Different from the previous pro
 1. How to get good data. The word "trash in trash out" has been literally proven in this project. We can not get a model performing better than the training data. Also as model cannot judge intelligently which data are effective which should be ignored, the features appeared the most frequently will be learned. Speaking of this project, the given data set of center-camera are consited of most of 0 for steer angles and not suficient data for turning and recovery, so the model will learn to say "0" when given input. This is the reason why the starting model always drove straight to deviate from the track.
 2. The importance of data augmentation. I didn't realized the augmentation is so critical to the success of certain tasks. I used it for getting more images in traffic sign classifier project. But the real turning point for this project is just introducing image translate and steer angles adjustment. The change is so obvious that I got a perfect driving behavior without modifying model architecure compared to direct falling out of track with previous bad data.
 
-To augment the data sat, I add random brightness enhancement and randomly translate images and angles thinking that this would help model learn how to handle different sunlight enviroment and deviation situations. For example, here is an image that has then been passed to add random brightness enhancement:
+To augment the data sat, I add random brightness enhancement and randomly translate images and angles thinking that this would help model learn how to handle different sunlight enviroment and deviation situations. For example, here is an image that has then been passed to add random brightness enhancement.
 
-![alt text]][image1]
+**Original image**
+
+![alt text][image1]
 
 This project lead me to a new stage when thinking about machine learning and neural network. It taught me the importance of proper data in success of a task and also appropriate method to adjust training data to yield better performance with same data set.
